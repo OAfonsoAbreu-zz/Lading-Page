@@ -1,0 +1,40 @@
+<div class="row container">
+    <h2>Contato</h2>
+    <div class="col-6">fdsgfsfgd</div>
+    <div class="col-6">
+        <form #emailForm="ngForm" *ngIf="email">
+            <div class="mb-3 row">
+                <div class="col-6">
+                    <label for="nome" class="form-label">Nome</label>
+                    <input [(ngModel)]="email.nome" name="nome" #emailNome="ngModel" [ngClass]="{'is-invalid': !emailNome.valid}" type="text" class="form-control" id="nome" placeholder="Afonso Abreu" required>
+                    <div class="invalid-feedback">
+                        <span>Nome é obrigatório.</span>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input [(ngModel)]="email.email" name="email" #emailEmail="ngModel" [ngClass]="{'is-invalid': !emailEmail.valid}" type="email" class="form-control" id="email" placeholder="afonsoabreu@exemplo.com.br" required>
+                    <div class="invalid-feedback">
+                        <span>E-mail é obrigatório. Padrão: exemplo@exemplo.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="assunto" class="form-label">Assunto</label>
+                <input [(ngModel)]="email.assunto" name="assunto" #emailAssunto="ngModel" [ngClass]="{'is-invalid': !emailAssunto.valid}" type="text" class="form-control" id="assunto" placeholder="Orçamento de site" required>
+                <div class="invalid-feedback">
+                    <span>Assunto é obrigatório.</span>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="mensagem" class="form-label">Mensagem</label>
+                <textarea [(ngModel)]="email.mensagem" name="mensagem" #emailMensagem="ngModel" [ngClass]="{'is-invalid': !emailMensagem.valid}" class="form-control" id="mensagem" rows="3" placeholder="Escreva aqui mais detalhes do que precisa..." required></textarea>
+                <div class="invalid-feedback">
+                    <span>Mensagem é obrigatório.</span>
+                </div>
+            </div>
+    
+            <button [disabled]="emailForm.invalid" class="btn btn-primary float-left" (click)="enviar()">Enviar</button>
+        </form>
+    </div>
+</div>

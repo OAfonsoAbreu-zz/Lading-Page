@@ -1,0 +1,15 @@
+<div class="row featurette" [id]="featurette.id">
+    <div class="col-md-7 order-md-{{featurette.ordemTexto}}">
+        <h2 class="featurette-heading">
+            {{featurette.titulo}}
+        </h2>
+        <p class="lead">
+            {{featurette.texto}}
+        </p>
+    </div>
+    <div class="col-md-5 order-md-{{featurette.ordemImagem}}">
+        <img [src]="featurette.pathImagem"  alt="" class="img-featurette">
+    </div>
+</div>
+<hr class="featurette-divider">
+    

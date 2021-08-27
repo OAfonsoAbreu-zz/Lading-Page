@@ -1,0 +1,9 @@
+<app-nav-bar></app-nav-bar>
+<main id="home">
+  <app-carousel></app-carousel>
+  <div class="container" *ngFor='let featurett of featurettes'>
+    <app-featurette [featurette]="featurett"></app-featurette>
+  </div>
+  <app-contato></app-contato>
+  <app-footer></app-footer>
+</main>
