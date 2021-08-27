@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Featurette } from './shared/component/featurette/featurette';
 import { FeaturetteService } from './shared/component/featurette/featurette.service';
-import { Inject } from '@angular/core';
-import { DOCUMENT } from '@angular/common';
-import { PageScrollService } from 'ngx-page-scroll-core';
 
 @Component({
   selector: 'app-root',
@@ -16,15 +13,10 @@ export class AppComponent implements OnInit{
 
   featurettes: Featurette[] = [];
 
-  constructor(private featuretteService: FeaturetteService, private pageScrollService: PageScrollService, @Inject(DOCUMENT) private document: any){}
+  constructor(private featuretteService: FeaturetteService){}
 
   ngOnInit(): void {
 
-    this.pageScrollService.scroll({
-      document: this.document,
-      scrollTarget: '.theEnd',
-    });
-    
     this.featurettes = this.featuretteService.retriveAll();
   }
 }
