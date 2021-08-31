@@ -1,3 +1,5 @@
 .redes-sociais > div > a{
     text-decoration: none;
+    max-width: 40px;
+    max-height: 40px;
 }
