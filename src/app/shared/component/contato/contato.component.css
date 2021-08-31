@@ -1,5 +1,8 @@
 .redes-sociais > div > a{
     text-decoration: none;
+}
+
+.redes-sociais > div > a > img{
     max-width: 40px;
     max-height: 40px;
 }
