@@ -9,7 +9,7 @@ import { Email } from "./email";
 
 export class EmailService{
 
-    private emailUrlBase: string = "http://localhost:3100/api/enviar-email/";
+    private emailUrlBase: string = "https://serverabreu.herokuapp.com/api/enviar-email/";
 
     constructor(private httpClient: HttpClient){}
     
